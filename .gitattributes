@@ -1,0 +1,13 @@
+# Normalize text files to LF in repo
+* text=auto eol=lf
+
+# Keep Python files as text with LF
+*.py text eol=lf
+
+# Common binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.fits binary
+*.h5 binary
+*.hdf5 binary
