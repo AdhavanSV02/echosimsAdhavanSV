@@ -1,1 +1,41 @@
-#instrumental model
+# Instrumental model for the ECHO / CMB-Bharat satellite
+#
+# Baseline specifications (frequency channels, beam FWHM and polarization sensitivity) reproduced from Table 1 of:
+#   Adak et al., "B-mode forecast of CMB-Bharat",
+#   Monthly Notices of the Royal Astronomical Society, 514 (2022), 3002-3016.
+#   doi:10.1093/mnras/stac1474
+#
+# The polarization_sensitivity column corresponds to the Q and U noise r.m.s.
+# (s_P, in uK*arcmin). The temperature sensitivity can be estimated under the
+# usual convention s_P ~= sqrt(2) * s_T, i.e. s_T ~= s_P / sqrt(2).
+
+name: ECHO
+description: Proposed CMB-Bharat / ECHO instrument specifications
+frequency_range_ghz: [28, 850]
+
+units:
+  frequency: GHz
+  beam_fwhm: arcmin
+  polarization_sensitivity: uK_arcmin
+
+channels:
+  - {frequency: 28, beam_fwhm: 39.9, polarization_sensitivity: 16.5}
+  - {frequency: 35, beam_fwhm: 31.9, polarization_sensitivity: 13.3}
+  - {frequency: 45, beam_fwhm: 24.8, polarization_sensitivity: 11.9}
+  - {frequency: 65, beam_fwhm: 17.1, polarization_sensitivity: 8.9}
+  - {frequency: 75, beam_fwhm: 14.91, polarization_sensitivity: 5.1}
+  - {frequency: 95, beam_fwhm: 11.7, polarization_sensitivity: 4.6}
+  - {frequency: 115, beam_fwhm: 9.72, polarization_sensitivity: 3.1}
+  - {frequency: 130, beam_fwhm: 8.59, polarization_sensitivity: 3.1}
+  - {frequency: 145, beam_fwhm: 7.70, polarization_sensitivity: 2.4}
+  - {frequency: 165, beam_fwhm: 6.77, polarization_sensitivity: 2.5}
+  - {frequency: 190, beam_fwhm: 5.88, polarization_sensitivity: 2.8}
+  - {frequency: 220, beam_fwhm: 5.08, polarization_sensitivity: 3.3}
+  - {frequency: 275, beam_fwhm: 4.06, polarization_sensitivity: 6.3}
+  - {frequency: 340, beam_fwhm: 3.28, polarization_sensitivity: 11.4}
+  - {frequency: 390, beam_fwhm: 2.86, polarization_sensitivity: 21.9}
+  - {frequency: 450, beam_fwhm: 2.48, polarization_sensitivity: 43.4}
+  - {frequency: 520, beam_fwhm: 2.14, polarization_sensitivity: 102.0}
+  - {frequency: 600, beam_fwhm: 1.86, polarization_sensitivity: 288.0}
+  - {frequency: 700, beam_fwhm: 1.59, polarization_sensitivity: 1122.0}
+  - {frequency: 850, beam_fwhm: 1.31, polarization_sensitivity: 9550.0}
