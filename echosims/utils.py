@@ -1,7 +1,7 @@
 import yaml
 
 class EchoInstrument:
-    def __init__(self, filename):
+    def __init__(self, filename = 'data/echo.yaml'):
       self.filename = filename
       self.channels = self.load_data() 
     
