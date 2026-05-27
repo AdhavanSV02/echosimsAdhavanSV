@@ -4,6 +4,7 @@
 from importlib import resources
 from pathlib import Path
 import yaml
+import math
 
 # internal function for guessing the paths of data/echo.yaml
 def _candidate_paths(filename):
@@ -59,3 +60,7 @@ class EchoInstrument:
     def get_polarization_sensitivity(self, frequency):
        channel = self.get_channel(frequency)
        return channel["polarization_sensitivity"]
+    
+    def get_temperature_sensitivity(self, frequency):
+       pol_sens = self.get_polarization_sensitivity(frequency)
+       return pol_sens/math.sqrt(2)
